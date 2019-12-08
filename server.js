@@ -14,10 +14,9 @@ const app = express();
 //setting up the database
 const config = require('./config/database');
 mongoose.Promise = Promise;
-mongoose
-  .connect(config.database, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
+mongoose.connect(
+  process.env.MONGODB_URI  ||
+  "mongodb://user1:password1@ds253348.mlab.com:53348/heroku_klh7mwhk"
   })
   .then( result => {
     console.log(`Connected to database '${result.connections[0].name}' on ${result.connections[0].host}:${result.connections[0].port}`);
