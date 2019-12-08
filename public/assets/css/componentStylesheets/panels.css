@@ -1,0 +1,73 @@
+.storyPanel {
+	background-image: url('../../img/panel-background.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	padding: 20px;
+	border: 1px solid white;
+	position: relative;
+  margin: 50px 20px;
+  opacity: 0.9;
+}
+
+.imgBox {
+  overflow: hidden;
+  border: 3px solid #ddd;
+}
+
+.imgBox:hover .storyImg{
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.storyImg {
+	float: right;
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+.storyHeadline {
+	font-size: 3.5em;
+	font-style: italic;
+  -webkit-transition: color 300ms ease;
+  transition: color 300ms ease;
+}
+
+.storyHeadline:hover {
+	color: white;
+}
+
+.storyPanel a {
+	text-decoration: none;
+	color: #ddd;
+}
+
+.storySummary {
+	font-size: 2.5em;
+}
+
+.storyButton {
+  font-size: 2.5em;
+  padding: 5px 30px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  font-weight: 600;
+  color: orange;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  margin-right:10px;
+}
+
+.storyButton:hover {
+  color: #777;
+  background: #ddd;
+  border: 1x solid white;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
